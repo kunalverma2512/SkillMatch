@@ -8,7 +8,6 @@ import {
   updateDoc,
 } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-firestore.js";
 
-import firebaseConfig from "./config.js";
 
 import {
   getAuth,
@@ -21,14 +20,14 @@ import {
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
-// const firebaseConfig = {
-//   apiKey: "AIzaSyAiacso2pFS4uBOBU_w4doFmsi5MJnA5_U",
-//   authDomain: "skillmatch-921f8.firebaseapp.com",
-//   projectId: "skillmatch-921f8",
-//   storageBucket: "skillmatch-921f8.firebasestorage.app",
-//   messagingSenderId: "384120413323",
-//   appId: "1:384120413323:web:f42a06e84236d4d2b3c88e",
-// };
+const firebaseConfig = {
+  apiKey: "AIzaSyAiacso2pFS4uBOBU_w4doFmsi5MJnA5_U",
+  authDomain: "skillmatch-921f8.firebaseapp.com",
+  projectId: "skillmatch-921f8",
+  storageBucket: "skillmatch-921f8.firebasestorage.app",
+  messagingSenderId: "384120413323",
+  appId: "1:384120413323:web:f42a06e84236d4d2b3c88e",
+};
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
