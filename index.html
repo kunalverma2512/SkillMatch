@@ -1,0 +1,1187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SkillMatch</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- header -->
+    <header class="p-3 text-bg-dark">
+      <div class="container">
+        <div
+          class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start"
+        >
+          <!-- logo text -->
+          <a
+            href="#"
+            class="d-flex align-items-center mb-3 mb-md-0 text-white me-md-auto text-decoration-none"
+          >
+            <span class="fs-4 fw-bold">SkillMatch</span>
+          </a>
+
+          <ul
+            class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0"
+          >
+            <li><a href="#" class="nav-link px-2 text-secondary">Home</a></li>
+            <li><a href="#" class="nav-link px-2 text-white">Features</a></li>
+            <li>
+              <a
+                href="./contact/contactus.html"
+                class="nav-link px-2 text-white"
+                >Contact Us</a
+              >
+            </li>
+            <li>
+              <a href="./FAQ/faq.html" class="nav-link px-2 text-white">FAQs</a>
+            </li>
+            <li>
+              <a href="./about/aboutpage.html" class="nav-link px-2 text-white"
+                >About</a
+              >
+            </li>
+          </ul>
+
+          <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+            <input
+              type="search"
+              class="form-control form-control-dark text-bg-dark"
+              placeholder="Search..."
+              aria-label="Search"
+            />
+          </form>
+
+          <div class="text-end">
+            <button
+              type="button"
+              class="btn btn-outline-light me-2"
+              data-bs-toggle="modal"
+              data-bs-target="#loginmodal"
+            >
+              Login
+            </button>
+            <button
+              type="button"
+              class="btn btn-warning"
+              data-bs-toggle="modal"
+              data-bs-target="#signupmodal"
+            >
+              Sign-up
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- login popup modal -->
+    <div
+      class="modal fade modal-sheet"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="signupModalLabel"
+      aria-hidden="true"
+      id="loginmodal"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content rounded-4 shadow">
+          <div class="modal-header p-5 pb-4 border-bottom-0">
+            <h1 class="fw-bold mb-0 fs-2">Login</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+
+          <div class="modal-body p-5 pt-0">
+            <form class="" id="login-form">
+              <div class="form-floating mb-3">
+                <input
+                  type="email"
+                  class="form-control rounded-3"
+                  id="email-login"
+                  placeholder="name@example.com"
+                />
+                <label for="email-login">Email address</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  type="password"
+                  class="form-control rounded-3"
+                  id="password-login"
+                  placeholder="Password"
+                />
+                <label for="password-login">Password</label>
+              </div>
+              <button
+                class="w-100 mb-2 btn btn-lg rounded-3 btn-primary"
+                type="submit"
+              >
+                Login
+              </button>
+              <hr class="my-4" />
+              <h2 class="fs-5 fw-bold mb-3">Or use a third-party</h2>
+              <button
+                class="w-100 py-2 mb-2 btn btn-outline-secondary rounded-3"
+                type="submit"
+              >
+                <svg class="bi me-1" width="16" height="16">
+                  <use xlink:href="#twitter"></use>
+                </svg>
+                Login with Twitter
+              </button>
+              <button
+                class="w-100 py-2 mb-2 btn btn-outline-primary rounded-3"
+                type="submit"
+              >
+                <svg class="bi me-1" width="16" height="16">
+                  <use xlink:href="#facebook"></use>
+                </svg>
+                Login with Facebook
+              </button>
+              <button
+                class="w-100 py-2 mb-2 btn btn-outline-secondary rounded-3"
+                type="submit"
+              >
+                <svg class="bi me-1" width="16" height="16">
+                  <use xlink:href="#github"></use>
+                </svg>
+                Login with GitHub
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SignUp Popup Modal -->
+    <div
+      class="modal fade modal-sheet"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="signupModalLabel"
+      aria-hidden="true"
+      id="signupmodal"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content rounded-4 shadow">
+          <div class="modal-header p-5 pb-4 border-bottom-0">
+            <h1 class="fw-bold mb-0 fs-2">Sign up for free</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+
+          <div class="modal-body p-5 pt-0">
+            <form class="" id="signup-form">
+              <div class="form-floating mb-3">
+                <input
+                  type="email"
+                  class="form-control rounded-3"
+                  id="email-signup"
+                  placeholder="name@example.com"
+                />
+                <label for="email-signup">Email address</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  type="password"
+                  class="form-control rounded-3"
+                  id="password-signup"
+                  placeholder="Password"
+                />
+                <label for="password-signup">Password</label>
+              </div>
+              <button
+                class="w-100 mb-2 btn btn-lg rounded-3 btn-primary"
+                type="submit"
+              >
+                Sign up
+              </button>
+              <small class="text-body-secondary"
+                >By clicking Sign up, you agree to the terms of use.</small
+              >
+              <hr class="my-4" />
+              <h2 class="fs-5 fw-bold mb-3">Or use a third-party</h2>
+              <button
+                class="w-100 py-2 mb-2 btn btn-outline-secondary rounded-3"
+                type="submit"
+              >
+                <svg class="bi me-1" width="16" height="16">
+                  <use xlink:href="#twitter"></use>
+                </svg>
+                Sign up with Twitter
+              </button>
+              <button
+                class="w-100 py-2 mb-2 btn btn-outline-primary rounded-3"
+                type="submit"
+              >
+                <svg class="bi me-1" width="16" height="16">
+                  <use xlink:href="#facebook"></use>
+                </svg>
+                Sign up with Facebook
+              </button>
+              <button
+                class="w-100 py-2 mb-2 btn btn-outline-secondary rounded-3"
+                type="submit"
+              >
+                <svg class="bi me-1" width="16" height="16">
+                  <use xlink:href="#github"></use>
+                </svg>
+                Sign up with GitHub
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- hero section -->
+    <div class="container my-5">
+      <div
+        class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg"
+      >
+        <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
+          <h1 class="display-4 fw-bold lh-1 text-body-emphasis">
+            Welcome to SkillMatch - Your Platform for Skill Collaboration
+          </h1>
+          <p class="lead">
+            A platform designed for students, professionals, and innovators to
+            find like-minded individuals, collaborate on projects, and endorse
+            each other’s skills. Whether you’re looking to collaborate on a
+            machine learning project or seeking a creative partner for graphic
+            design, SkillMatch helps you find your perfect match.
+          </p>
+          <div
+            class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3"
+          >
+            <button
+              type="button"
+              class="btn btn-primary btn-lg px-4 me-md-2 fw-bold"
+            >
+              Get Started
+            </button>
+            <button type="button" class="btn btn-outline-secondary btn-lg px-4">
+              Default
+            </button>
+          </div>
+        </div>
+        <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
+          <img
+            class="rounded-lg-3"
+            src="https://media.istockphoto.com/id/1887444236/photo/two-business-professionals-discussing-ideas-in-an-office.jpg?s=2048x2048&w=is&k=20&c=pnEFYF32-zzncz_3_7DIT2XOygNicd6DZnZwkKuP6D4="
+            alt=""
+            width="720"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- video section -->
+    <div class="video-section">
+      <div class="overlay"></div>
+
+      <!-- The HTML5 video element that will create the background video on the header -->
+      <video
+        playsinline="playsinline"
+        autoplay="autoplay"
+        muted="muted"
+        loop="loop"
+      >
+        <source
+          src="https://cdn.coverr.co/videos/coverr-cinematic-snowy-mountains-7615/720p.mp4"
+          type="video/mp4"
+        />
+      </video>
+
+      <!-- The header content -->
+      <div class="container h-100" style="height: 800px">
+        <div
+          class="d-flex h-100 text-center align-items-center"
+          style="color: black"
+        >
+          <div class="w-100 text-white">
+            <h1 class="display-3">
+              Find Collaborators. Enhance Skills. Achieve More
+            </h1>
+            <p class="lead mb-0">
+              SkillMatch empowers you to build your network, grow your skills,
+              and get endorsed by professionals in the field. Join the platform
+              today to start collaborating with the brightest minds in your
+              domain.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Features section - 1 -->
+    <div class="container px-4 py-5" id="custom-cards">
+      <h2 class="pb-2 border-bottom">Custom cards</h2>
+
+      <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+        <div class="col">
+          <div
+            class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+          >
+            <div
+              class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1"
+            >
+              <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">
+                Short title, long jacket
+              </h3>
+              <ul class="d-flex list-unstyled mt-auto">
+                <li class="me-auto">
+                  <img
+                    src="#"
+                    alt="Bootstrap"
+                    width="32"
+                    height="32"
+                    class="rounded-circle border border-white"
+                  />
+                </li>
+                <li class="d-flex align-items-center me-3">
+                  <svg class="bi me-2" width="1em" height="1em">
+                    <use xlink:href="#geo-fill"></use>
+                  </svg>
+                  <small>Earth</small>
+                </li>
+                <li class="d-flex align-items-center">
+                  <svg class="bi me-2" width="1em" height="1em">
+                    <use xlink:href="#calendar3"></use>
+                  </svg>
+                  <small>3d</small>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div
+            class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+          >
+            <div
+              class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1"
+            >
+              <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">
+                Much longer title that wraps to multiple lines
+              </h3>
+              <ul class="d-flex list-unstyled mt-auto">
+                <li class="me-auto">
+                  <img
+                    src="https://github.com/twbs.png"
+                    alt="Bootstrap"
+                    width="32"
+                    height="32"
+                    class="rounded-circle border border-white"
+                  />
+                </li>
+                <li class="d-flex align-items-center me-3">
+                  <svg class="bi me-2" width="1em" height="1em">
+                    <use xlink:href="#geo-fill"></use>
+                  </svg>
+                  <small>Pakistan</small>
+                </li>
+                <li class="d-flex align-items-center">
+                  <svg class="bi me-2" width="1em" height="1em">
+                    <use xlink:href="#calendar3"></use>
+                  </svg>
+                  <small>4d</small>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div
+            class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+          >
+            <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+              <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">
+                Another longer title belongs here
+              </h3>
+              <ul class="d-flex list-unstyled mt-auto">
+                <li class="me-auto">
+                  <img
+                    src="https://github.com/twbs.png"
+                    alt="Bootstrap"
+                    width="32"
+                    height="32"
+                    class="rounded-circle border border-white"
+                  />
+                </li>
+                <li class="d-flex align-items-center me-3">
+                  <svg class="bi me-2" width="1em" height="1em">
+                    <use xlink:href="#geo-fill"></use>
+                  </svg>
+                  <small>California</small>
+                </li>
+                <li class="d-flex align-items-center">
+                  <svg class="bi me-2" width="1em" height="1em">
+                    <use xlink:href="#calendar3"></use>
+                  </svg>
+                  <small>5d</small>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- How it works -->
+    <section class="py-5">
+      <div class="container">
+        <!--- Heading -->
+        <div class="row text-center mb-4">
+          <div class="col-12 col-lg-10 col-xl-8 mx-auto text-center">
+            <p class="text-muted mb-0 fw-light">Steps</p>
+            <h2>How SkillMatch Works</h2>
+            <p class="lead mb-4">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
+              tristique nec sapien vel bibendum. Phasellus sagittis nisl vitae
+              auctor sodales.
+            </p>
+          </div>
+        </div>
+        <!--- Steps Wrap -->
+        <div class="row justify-content-center">
+          <div class="col-lg-9">
+            <div class="row">
+              <!-- Step -->
+              <div class="col-lg-4">
+                <div class="text-center position-relative">
+                  <!-- Step Icon -->
+                  <div
+                    class="step-icon mx-auto border border-2 border rounded-circle d-flex align-items-center justify-content-center"
+                    style="width: 150px; height: 150px"
+                  >
+                    <svg
+                      class="bi bi-fingerprint text-secondary fs-1"
+                      height="40"
+                      viewbox="0 0 16 16"
+                      width="40"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M8.06 6.5a.5.5 0 0 1 .5.5v.776a11.5 11.5 0 0 1-.552 3.519l-1.331 4.14a.5.5 0 0 1-.952-.305l1.33-4.141a10.5 10.5 0 0 0 .504-3.213V7a.5.5 0 0 1 .5-.5Z"
+                      ></path>
+                      <path
+                        d="M6.06 7a2 2 0 1 1 4 0 .5.5 0 1 1-1 0 1 1 0 1 0-2 0v.332c0 .409-.022.816-.066 1.221A.5.5 0 0 1 6 8.447c.04-.37.06-.742.06-1.115V7Zm3.509 1a.5.5 0 0 1 .487.513 11.5 11.5 0 0 1-.587 3.339l-1.266 3.8a.5.5 0 0 1-.949-.317l1.267-3.8a10.5 10.5 0 0 0 .535-3.048A.5.5 0 0 1 9.569 8Zm-3.356 2.115a.5.5 0 0 1 .33.626L5.24 14.939a.5.5 0 1 1-.955-.296l1.303-4.199a.5.5 0 0 1 .625-.329Z"
+                      ></path>
+                      <path
+                        d="M4.759 5.833A3.501 3.501 0 0 1 11.559 7a.5.5 0 0 1-1 0 2.5 2.5 0 0 0-4.857-.833.5.5 0 1 1-.943-.334Zm.3 1.67a.5.5 0 0 1 .449.546 10.72 10.72 0 0 1-.4 2.031l-1.222 4.072a.5.5 0 1 1-.958-.287L4.15 9.793a9.72 9.72 0 0 0 .363-1.842.5.5 0 0 1 .546-.449Zm6 .647a.5.5 0 0 1 .5.5c0 1.28-.213 2.552-.632 3.762l-1.09 3.145a.5.5 0 0 1-.944-.327l1.089-3.145c.382-1.105.578-2.266.578-3.435a.5.5 0 0 1 .5-.5Z"
+                      ></path>
+                      <path
+                        d="M3.902 4.222a4.996 4.996 0 0 1 5.202-2.113.5.5 0 0 1-.208.979 3.996 3.996 0 0 0-4.163 1.69.5.5 0 0 1-.831-.556Zm6.72-.955a.5.5 0 0 1 .705-.052A4.99 4.99 0 0 1 13.059 7v1.5a.5.5 0 1 1-1 0V7a3.99 3.99 0 0 0-1.386-3.028.5.5 0 0 1-.051-.705ZM3.68 5.842a.5.5 0 0 1 .422.568c-.029.192-.044.39-.044.59 0 .71-.1 1.417-.298 2.1l-1.14 3.923a.5.5 0 1 1-.96-.279L2.8 8.821A6.531 6.531 0 0 0 3.058 7c0-.25.019-.496.054-.736a.5.5 0 0 1 .568-.422Zm8.882 3.66a.5.5 0 0 1 .456.54c-.084 1-.298 1.986-.64 2.934l-.744 2.068a.5.5 0 0 1-.941-.338l.745-2.07a10.51 10.51 0 0 0 .584-2.678.5.5 0 0 1 .54-.456Z"
+                      ></path>
+                      <path
+                        d="M4.81 1.37A6.5 6.5 0 0 1 14.56 7a.5.5 0 1 1-1 0 5.5 5.5 0 0 0-8.25-4.765.5.5 0 0 1-.5-.865Zm-.89 1.257a.5.5 0 0 1 .04.706A5.478 5.478 0 0 0 2.56 7a.5.5 0 0 1-1 0c0-1.664.626-3.184 1.655-4.333a.5.5 0 0 1 .706-.04ZM1.915 8.02a.5.5 0 0 1 .346.616l-.779 2.767a.5.5 0 1 1-.962-.27l.778-2.767a.5.5 0 0 1 .617-.346Zm12.15.481a.5.5 0 0 1 .49.51c-.03 1.499-.161 3.025-.727 4.533l-.07.187a.5.5 0 0 1-.936-.351l.07-.187c.506-1.35.634-2.74.663-4.202a.5.5 0 0 1 .51-.49Z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <h4 class="mt-3 fs-5">Step 1</h4>
+                  <h3 class="mt-3 fs-5">Create Your Profile</h3>
+                  <p class="text-muted mt-4 fs-6 px-lg-3 mb-5 mb-lg-0">
+                    Add your skills, interests, and availability for collaboration.
+                  </p>
+                  <!-- Arrow Icon -->
+                  <div
+                    class="arrow-icon position-absolute d-none d-lg-block"
+                    style="top: 50px; right: -25px"
+                  >
+                    <svg
+                      class="bi bi-arrow-right"
+                      height="30"
+                      viewbox="0 0 16 16"
+                      width="30"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"
+                        fill-rule="evenodd"
+                      ></path>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <!-- Step -->
+              <div class="col-lg-4">
+                <div class="text-center position-relative">
+                  <!-- Step Icon -->
+                  <div
+                    class="step-icon mx-auto border border-2 border rounded-circle d-flex align-items-center justify-content-center"
+                    style="width: 150px; height: 150px"
+                  >
+                    <svg
+                      class="bi bi-lightbulb text-secondary"
+                      height="40"
+                      viewbox="0 0 16 16"
+                      width="40"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13a.5.5 0 0 1 0 1 .5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1 0-1 .5.5 0 0 1 0-1 .5.5 0 0 1-.46-.302l-.761-1.77a1.964 1.964 0 0 0-.453-.618A5.984 5.984 0 0 1 2 6zm6-5a5 5 0 0 0-3.479 8.592c.263.254.514.564.676.941L5.83 12h4.342l.632-1.467c.162-.377.413-.687.676-.941A5 5 0 0 0 8 1z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <h4 class="mt-3 fs-5">Step 2</h4>
+                  <h3 class="mt-3 fs-5">Search for Collaborators</h3>
+                  <p class="text-muted mt-4 fs-6 px-lg-3 mb-5 mb-lg-0">
+                    Use our powerful search engine to find users with the skills you need or want to work with.
+
+                  </p>
+                  <!-- Arrow Icon -->
+                  <div
+                    class="arrow-icon d-none d-lg-block position-absolute"
+                    style="top: 50px; right: -25px"
+                  >
+                    <svg
+                      class="bi bi-arrow-right"
+                      height="30"
+                      viewbox="0 0 16 16"
+                      width="30"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"
+                        fill-rule="evenodd"
+                      ></path>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <!-- Step -->
+              <div class="col-lg-4">
+                <div class="text-center position-relative">
+                  <!--- Step Icon -->
+                  <div
+                    class="step-icon mx-auto border border-2 border rounded-circle d-flex align-items-center justify-content-center"
+                    style="width: 150px; height: 150px"
+                  >
+                    <svg
+                      class="bi bi-mic text-secondary"
+                      height="40"
+                      viewbox="0 0 16 16"
+                      width="40"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3 8V7a.5.5 0 0 1 .5-.5z"
+                      ></path>
+                      <path
+                        d="M10 8a2 2 0 1 1-4 0V3a2 2 0 1 1 4 0v5zM8 0a3 3 0 0 0-3 3v5a3 3 0 0 0 6 0V3a3 3 0 0 0-3-3z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <h4 class="mt-3 fs-5">Step 3</h4>
+                  <h3 class="mt-3 fs-5">Connect and Collaborate</h3>
+                  <p class="text-muted mt-4 fs-6 px-lg-3 mb-5 mb-lg-0">
+                    Reach out and start collaborating on exciting projects. Share ideas, solve problems, and innovate together.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonial section -->
+    <section class="py-5">
+      <div class="container">
+        <div class="row justify-content-center text-center mb-2 mb-lg-4">
+          <div class="col-12 col-lg-8 col-xxl-7 text-center mx-auto">
+            <span class="text-muted">Raving Fans</span>
+            <h2 class="display-5 fw-bold">What Our Users Say</h2>
+            <p class="lead">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta
+              harum ipsum venenatis metus sem veniam eveniet aperiam suscipit.
+            </p>
+          </div>
+        </div>
+        <div class="row g-5 py-4 justify-content-center">
+          <div class="col-lg-8">
+            <div class="d-flex align-items-start mb-4">
+              <img
+                alt=""
+                class="img-fluid rounded-circle me-3"
+                height="96"
+                src="https://freefrontend.dev/assets/square-small.png"
+                width="96"
+              />
+              <div class="bg-light p-3 p-md-4">
+                <div class="text-primary mb-1">
+                  <svg
+                    class="bi bi-quote"
+                    fill="currentColor"
+                    height="32"
+                    viewbox="0 0 16 16"
+                    width="32"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 9 7.558V11a1 1 0 0 0 1 1h2Zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 3 7.558V11a1 1 0 0 0 1 1h2Z"
+                    ></path>
+                  </svg>
+                </div>
+                <p class="lead">
+                  At half-past eight the door opened, the policeman appeared,
+                  and, requesting them to follow him, led the way to an
+                  adjoining hall
+                </p>
+                <div class="text-end pt-2">
+                  <h5 class="fw-bold">John Doe</h5>
+                  <div class="text-muted">Graphic Designer</div>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex align-items-start">
+              <div class="bg-light p-3 p-md-4">
+                <div class="text-primary mb-1">
+                  <svg
+                    class="bi bi-quote"
+                    fill="currentColor"
+                    height="32"
+                    viewbox="0 0 16 16"
+                    width="32"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 9 7.558V11a1 1 0 0 0 1 1h2Zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 3 7.558V11a1 1 0 0 0 1 1h2Z"
+                    ></path>
+                  </svg>
+                </div>
+                <p class="lead">
+                  At half-past eight the door opened, the policeman appeared,
+                  and, requesting them to follow him, led the way to an
+                  adjoining hall
+                </p>
+                <div class="text-end pt-2">
+                  <h5 class="fw-bold">John Doe</h5>
+                  <div class="text-muted">Graphic Designer</div>
+                </div>
+              </div>
+              <img
+                alt=""
+                class="img-fluid rounded-circle ms-3"
+                height="96"
+                src="https://freefrontend.dev/assets/square-small.png"
+                width="96"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features section - 2 -->
+    <section class="py-5">
+      <div class="container">
+        <div class="row justify-content-center text-center mb-3">
+          <div class="col-lg-8 col-xl-7">
+            <span class="text-muted">Features</span>
+            <h2 class="display-5 fw-bold">Our Features</h2>
+            <p class="lead">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit
+              Consequatur quidem eius cum voluptatum quasi delectus.
+            </p>
+          </div>
+        </div>
+        <div class="row align-items-center">
+          <div class="col-md-4 order-2 order-md-1">
+            <div class="d-flex mb-4 mt-4 mt-md-0">
+              <div class="text-muted">
+                <svg
+                  class="bi bi-aspect-ratio"
+                  fill="currentColor"
+                  height="48"
+                  viewbox="0 0 16 16"
+                  width="48"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M0 3.5A1.5 1.5 0 0 1 1.5 2h13A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5v-9zM1.5 3a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-13z"
+                  ></path>
+                  <path
+                    d="M2 4.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1H3v2.5a.5.5 0 0 1-1 0v-3zm12 7a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1 0-1H13V8.5a.5.5 0 0 1 1 0v3z"
+                  ></path>
+                </svg>
+              </div>
+              <div class="ms-4">
+                <h5 class="fw-bold">Skill Matching</h5>
+                <p class="fw-light">
+                  Easily search and find collaborators based on your skill set
+                  and collaboration preferences.
+                </p>
+              </div>
+            </div>
+            <div class="d-flex mb-4">
+              <div class="text-muted">
+                <svg
+                  class="bi bi-emoji-wink"
+                  fill="currentColor"
+                  height="48"
+                  viewbox="0 0 16 16"
+                  width="48"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
+                  ></path>
+                  <path
+                    d="M4.285 9.567a.5.5 0 0 1 .683.183A3.498 3.498 0 0 0 8 11.5a3.498 3.498 0 0 0 3.032-1.75.5.5 0 1 1 .866.5A4.498 4.498 0 0 1 8 12.5a4.498 4.498 0 0 1-3.898-2.25.5.5 0 0 1 .183-.683zM7 6.5C7 7.328 6.552 8 6 8s-1-.672-1-1.5S5.448 5 6 5s1 .672 1 1.5zm1.757-.437a.5.5 0 0 1 .68.194.934.934 0 0 0 .813.493c.339 0 .645-.19.813-.493a.5.5 0 1 1 .874.486A1.934 1.934 0 0 1 10.25 7.75c-.73 0-1.356-.412-1.687-1.007a.5.5 0 0 1 .194-.68z"
+                  ></path>
+                </svg>
+              </div>
+              <div class="ms-4">
+                <h5 class="fw-bold">Endorsements</h5>
+                <p class="fw-light">
+                  Gain credibility and recognition with endorsements from peers
+                  and professionals.
+                </p>
+              </div>
+            </div>
+            <div class="d-flex">
+              <div class="text-muted">
+                <svg
+                  class="bi bi-layout-text-window-reverse"
+                  fill="currentColor"
+                  height="48"
+                  viewbox="0 0 16 16"
+                  width="48"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M13 6.5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 .5-.5zm0 3a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 .5-.5zm-.5 2.5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1 0-1h5z"
+                  ></path>
+                  <path
+                    d="M14 0a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12zM2 1a1 1 0 0 0-1 1v1h14V2a1 1 0 0 0-1-1H2zM1 4v10a1 1 0 0 0 1 1h2V4H1zm4 0v11h9a1 1 0 0 0 1-1V4H5z"
+                  ></path>
+                </svg>
+              </div>
+              <div class="ms-4">
+                <h5 class="fw-bold">Collaboration History</h5>
+                <p class="fw-light mb-0">
+                  Keep track of all the collaborations you’ve been a part of,
+                  with detailed records and outcomes.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 pe-lg-5 order-1 order-md-2">
+            <img
+              alt=""
+              class="img-fluid rounded"
+              src="https://freefrontend.dev/assets/rectangle-tall2.png"
+            />
+          </div>
+          <div class="col-md-4 ps-lg-5 order-3 order-md-3">
+            <div class="d-flex mb-4 mt-5 mt-md-0">
+              <div class="text-muted">
+                <svg
+                  class="bi bi-clipboard-check"
+                  fill="currentColor"
+                  height="48"
+                  viewbox="0 0 16 16"
+                  width="48"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z"
+                    fill-rule="evenodd"
+                  ></path>
+                  <path
+                    d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"
+                  ></path>
+                  <path
+                    d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"
+                  ></path>
+                </svg>
+              </div>
+              <div class="ms-4">
+                <h5 class="fw-bold">Profile Customization</h5>
+                <p class="fw-light">
+                  Customize your profile to showcase your skills, experience,
+                  and areas of interest, making you stand out in the community.
+                </p>
+              </div>
+            </div>
+            <div class="d-flex mb-4">
+              <div class="text-muted">
+                <svg
+                  class="bi bi-speedometer2"
+                  fill="currentColor"
+                  height="48"
+                  viewbox="0 0 16 16"
+                  width="48"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M8 4a.5.5 0 0 1 .5.5V6a.5.5 0 0 1-1 0V4.5A.5.5 0 0 1 8 4zM3.732 5.732a.5.5 0 0 1 .707 0l.915.914a.5.5 0 1 1-.708.708l-.914-.915a.5.5 0 0 1 0-.707zM2 10a.5.5 0 0 1 .5-.5h1.586a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 10zm9.5 0a.5.5 0 0 1 .5-.5h1.5a.5.5 0 0 1 0 1H12a.5.5 0 0 1-.5-.5zm.754-4.246a.389.389 0 0 0-.527-.02L7.547 9.31a.91.91 0 1 0 1.302 1.258l3.434-4.297a.389.389 0 0 0-.029-.518z"
+                  ></path>
+                  <path
+                    d="M0 10a8 8 0 1 1 15.547 2.661c-.442 1.253-1.845 1.602-2.932 1.25C11.309 13.488 9.475 13 8 13c-1.474 0-3.31.488-4.615.911-1.087.352-2.49.003-2.932-1.25A7.988 7.988 0 0 1 0 10zm8-7a7 7 0 0 0-6.603 9.329c.203.575.923.876 1.68.63C4.397 12.533 6.358 12 8 12s3.604.532 4.923.96c.757.245 1.477-.056 1.68-.631A7 7 0 0 0 8 3z"
+                    fill-rule="evenodd"
+                  ></path>
+                </svg>
+              </div>
+              <div class="ms-4">
+                <h5 class="fw-bold">Unlimited Usage</h5>
+                <p class="fw-light">Lorem ipsum</p>
+              </div>
+            </div>
+            <div class="d-flex">
+              <div class="text-muted">
+                <svg
+                  class="bi bi-pencil-square"
+                  fill="currentColor"
+                  height="48"
+                  viewbox="0 0 16 16"
+                  width="48"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"
+                  ></path>
+                  <path
+                    d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"
+                    fill-rule="evenodd"
+                  ></path>
+                </svg>
+              </div>
+              <div class="ms-4">
+                <h5 class="fw-bold">100% Customizable</h5>
+                <p class="fw-light mb-0">Lorem ipsum</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Carousel -->
+    <div
+      id="carouselExampleCaptions"
+      class="carousel slide"
+      style="width: 90%; margin: 20px auto"
+    >
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="https://media.istockphoto.com/id/2156387160/photo/hispanic-latin-american-couple-software-engineer-developer-use-computer-work-on-program.jpg?s=2048x2048&w=is&k=20&c=fepJG0NDR6r8nr4Oay11duUnWQP0GHSQjKOt7KSMY94="
+            class="d-block w-100"
+            alt="..."
+            style="height: 700px; object-fit: cover; border-radius: 20px"
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>First slide label</h5>
+            <p>Some representative placeholder content for the first slide.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img
+            src="https://media.istockphoto.com/id/1887444773/photo/diverse-professionals-brainstorming-on-glass-wall.jpg?s=2048x2048&w=is&k=20&c=04sW74SXWLmExTIvKNb84qtfe3muszvFGuZptjzUyy4="
+            class="d-block w-100"
+            alt="..."
+            style="height: 700px; object-fit: cover; border-radius: 20px"
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Second slide label</h5>
+            <p>Some representative placeholder content for the second slide.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img
+            src="https://media.istockphoto.com/id/1490859962/photo/power-soft-skills-multi-skills-responsibility-hr-human-resources-concept-personal-attribute.jpg?s=2048x2048&w=is&k=20&c=LLpADmzD9n1SlCKlh2r8fGavd9TVU5h4E36mbxHIGP4="
+            class="d-block w-100"
+            alt="..."
+            style="height: 700px; object-fit: cover; border-radius: 20px"
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Third slide label</h5>
+            <p>Some representative placeholder content for the third slide.</p>
+          </div>
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <!-- About me -->
+    <section class="py-5">
+      <div class="container">
+        <div class="row align-items-center gx-4">
+          <div class="col-md-5">
+            <div class="ms-md-2 ms-lg-5">
+              <img
+                class="img-fluid rounded-3"
+                src="https://freefrontend.dev/assets/square.png"
+              />
+            </div>
+          </div>
+          <div class="col-md-6 offset-md-1">
+            <div class="ms-md-2 ms-lg-5">
+              <span class="text-muted">Our Story</span>
+              <h2 class="display-5 fw-bold">About Us</h2>
+              <p class="lead">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud.
+              </p>
+              <p class="lead mb-0">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- gallery -->
+    <section class="py-5">
+      <div class="container">
+        <div class="row justify-content-center text-center mb-3 mb-md-5">
+          <div class="col-lg-8 col-xxl-7">
+            <span class="text-muted">Showcase</span>
+            <h2 class="display-5 fw-bold mb-3">Our Gallery</h2>
+            <p class="lead">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta
+              harum ipsum venenatis metus sem veniam eveniet aperiam suscipit.
+            </p>
+          </div>
+        </div>
+        <div class="row gy-4">
+          <div class="col-md-6 col-xl-4">
+            <img
+              alt=""
+              class="img-fluid rounded"
+              src="https://freefrontend.dev/assets/rectangle-wide.png"
+            />
+          </div>
+          <div class="col-md-6 col-xl-4">
+            <div class="bg-light rounded h-100 d-flex align-items-center">
+              <div class="text-center p-5 p-md-3">
+                <h4>A Catchy Title</h4>
+                <p class="mt-3 mb-0">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Soluta harum ipsum venenatis metus sem veniam.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-xl-4">
+            <img
+              alt=""
+              class="img-fluid rounded"
+              src="https://freefrontend.dev/assets/rectangle-wide.png"
+            />
+          </div>
+          <div class="col-md-6 col-xl-4">
+            <img
+              alt=""
+              class="img-fluid rounded"
+              src="https://freefrontend.dev/assets/rectangle-wide.png"
+            />
+          </div>
+          <div class="col-md-6 col-xl-4">
+            <img
+              alt=""
+              class="img-fluid rounded"
+              src="https://freefrontend.dev/assets/rectangle-wide.png"
+            />
+          </div>
+          <div class="col-md-6 col-xl-4">
+            <img
+              alt=""
+              class="img-fluid rounded"
+              src="https://freefrontend.dev/assets/rectangle-wide.png"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <div class="container">
+      <footer class="py-5">
+        <div class="row">
+          <div class="col-6 col-md-2 mb-3">
+            <h5>Section</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary">Home</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary"
+                  >Features</a
+                >
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary">Pricing</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary">FAQs</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary">About</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-md-2 mb-3">
+            <h5>Section</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary">Home</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary"
+                  >Features</a
+                >
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary">Pricing</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary">FAQs</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary">About</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-md-2 mb-3">
+            <h5>Section</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary">Home</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary"
+                  >Features</a
+                >
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary">Pricing</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary">FAQs</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary">About</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-md-5 offset-md-1 mb-3">
+            <form>
+              <h5>Subscribe to our newsletter</h5>
+              <p>Monthly digest of what's new and exciting from us.</p>
+              <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                <label for="newsletter1" class="visually-hidden"
+                  >Email address</label
+                >
+                <input
+                  id="newsletter1"
+                  type="text"
+                  class="form-control"
+                  placeholder="Email address"
+                />
+                <button class="btn btn-primary" type="button">Subscribe</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div
+          class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top"
+        >
+          <p>© 2024 Company, Inc. All rights reserved.</p>
+          <ul class="list-unstyled d-flex">
+            <li class="ms-3">
+              <a class="link-body-emphasis" href="#"
+                ><svg class="bi" width="24" height="24">
+                  <use xlink:href="#twitter"></use></svg
+              ></a>
+            </li>
+            <li class="ms-3">
+              <a class="link-body-emphasis" href="#"
+                ><svg class="bi" width="24" height="24">
+                  <use xlink:href="#instagram"></use></svg
+              ></a>
+            </li>
+            <li class="ms-3">
+              <a class="link-body-emphasis" href="#"
+                ><svg class="bi" width="24" height="24">
+                  <use xlink:href="#facebook"></use></svg
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" src="firebase.js"></script>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>

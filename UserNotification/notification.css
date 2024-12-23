@@ -1,0 +1,13 @@
+.notification-item {
+    padding: 1.3rem;
+    border-radius: 35px;
+    background-color: #fdd;
+}
+
+.notification-item button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 0.7rem;
+    border-radius: 2rem;
+}

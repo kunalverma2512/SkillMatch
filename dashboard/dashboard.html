@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UserDashboard</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="dashboard.css" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- header navbar -->
+    <header class="p-3 mb-3 border-bottom">
+      <div class="container">
+        <div
+          class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start"
+        >
+          <a
+            href="/dashboard/dashboard.html"
+            class="d-flex align-items-center mb-3 mb-md-0 text-white me-md-auto text-decoration-none"
+          >
+            <span class="fs-4 fw-bold" style="color: black">SkillMatch</span>
+          </a>
+
+          <ul
+            class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0"
+          >
+            <li>
+              <a href="#" class="nav-link px-2 link-secondary">Overview</a>
+            </li>
+            <li>
+              <a href="../Skills/Skills.html" class="nav-link px-2 link-body-emphasis">Skills</a>
+            </li>
+            <li>
+              <a href="#" class="nav-link px-2 link-body-emphasis">Customers</a>
+            </li>
+            <li>
+              <a href="#" class="nav-link px-2 link-body-emphasis">Products</a>
+            </li>
+          </ul>
+
+          <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+            <input
+              type="search"
+              class="form-control"
+              placeholder="Search..."
+              aria-label="Search"
+            />
+          </form>
+
+          <div class="dropdown text-end">
+            <a
+              href="#"
+              class="d-block link-body-emphasis text-decoration-none dropdown-toggle"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <img
+                src="https://github.com/mdo.png"
+                alt="mdo"
+                width="32"
+                height="32"
+                class="rounded-circle"
+              />
+            </a>
+            <ul class="dropdown-menu text-small">
+              <li><a class="dropdown-item" href="../UserNotification/notification.html">Notifications</a></li>
+              <li>
+                <a class="dropdown-item" href="../AccountSetting/setting.html"
+                  >Settings</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="../profile/profile.html"
+                  >Profile</a
+                >
+              </li>
+              <li><hr class="dropdown-divider" /></li>
+              <li><a class="dropdown-item" id="signout-user">Sign out</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- complete your profile banner -->
+    <!-- <div id="profile-banner" class="container" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+      <h3>Complete Your Profile</h3>
+      <p>Click below to update your profile.</p>
+      <button onclick="window.location.href='../AccountSetting/setting.html'" style="background-color: transparent; padding: 1%; border-radius: 1rem;">Update Profile</button>
+    </div> -->
+
+    <!-- header - welcome -->
+
+    <header class="masthead" style="margin-bottom: 190px">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-7 py-5">
+            <h1 class="mb-4">
+              Ready to Explore New Collaboration Opportunities?
+            </h1>
+            <h2 class="m-0">
+              SkillMatch isn&apos;t just a platform; it&apos;s a community built to help
+              you grow, collaborate, and succeed. It&apos;s where professionals,
+              creators, and innovators come together to find the perfect match
+              for their projects and skills. We empower you to take control of
+              your professional development, whether by exploring new
+              collaborations, enhancing your existing projects, or discovering
+              skills that will elevate your career.
+            </h2>
+          </div>
+          <div class="col-lg-5">
+            <div class="py-5 px-4 masthead-cards">
+              <div class="d-flex">
+                <a href="#" class="w-50 pr-3 pb-4">
+                  <div
+                    class="card border-0 border-bottom-red shadow-lg shadow-hover"
+                  >
+                    <div class="card-body text-center">
+                      <div class="text-center">
+                        <i class="fa fa-pencil fa-4x my-2"></i>
+                      </div>
+                      Themes
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="w-50 pl-3 pb-4">
+                  <div
+                    class="card border-0 border-bottom-blue shadow-lg shadow-hover"
+                  >
+                    <div class="card-body text-center">
+                      <div class="text-center">
+                        <i class="fa fa-th fa-4x my-2"></i>
+                      </div>
+                      Templates
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="d-flex">
+                <a href="#" class="w-50 pr-3">
+                  <div
+                    class="card border-0 border-bottom-yellow shadow-lg shadow-hover"
+                  >
+                    <div class="card-body text-center">
+                      <div class="text-center">
+                        <i class="fa fa-4x fa-code my-2"></i>
+                      </div>
+                      Snippets
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="w-50 pl-3">
+                  <div
+                    class="card border-0 border-bottom-green shadow-lg shadow-hover"
+                  >
+                    <div class="card-body text-center">
+                      <div class="text-center">
+                        <i class="fa fa-4x fa-list my-2"></i>
+                      </div>
+                      Guides
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="shape"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <svg
+        style="pointer-events: none"
+        class="wave"
+        width="100%"
+        height="50px"
+        preserveAspectRatio="none"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        viewBox="0 0 1920 75"
+      >
+        <defs>
+          <style>
+            .a {
+              fill: none;
+            }
+
+            .b {
+              clip-path: url(#a);
+            }
+
+            .c,
+            .d {
+              fill: #f9f9fc;
+            }
+
+            .d {
+              opacity: 0.5;
+              isolation: isolate;
+            }
+          </style>
+          <clipPath id="a">
+            <rect class="a" width="1920" height="75"></rect>
+          </clipPath>
+        </defs>
+        <title>wave</title>
+        <g class="b">
+          <path
+            class="c"
+            d="M1963,327H-105V65A2647.49,2647.49,0,0,1,431,19c217.7,3.5,239.6,30.8,470,36,297.3,6.7,367.5-36.2,642-28a2511.41,2511.41,0,0,1,420,48"
+          ></path>
+        </g>
+        <g class="b">
+          <path
+            class="d"
+            d="M-127,404H1963V44c-140.1-28-343.3-46.7-566,22-75.5,23.3-118.5,45.9-162,64-48.6,20.2-404.7,128-784,0C355.2,97.7,341.6,78.3,235,50,86.6,10.6-41.8,6.9-127,10"
+          ></path>
+        </g>
+        <g class="b">
+          <path
+            class="d"
+            d="M1979,462-155,446V106C251.8,20.2,576.6,15.9,805,30c167.4,10.3,322.3,32.9,680,56,207,13.4,378,20.3,494,24"
+          ></path>
+        </g>
+        <g class="b">
+          <path
+            class="d"
+            d="M1998,484H-243V100c445.8,26.8,794.2-4.1,1035-39,141-20.4,231.1-40.1,378-45,349.6-11.6,636.7,73.8,828,150"
+          ></path>
+        </g>
+      </svg>
+    </header>
+
+    <!-- content about platform -->
+    <section id="about-section" class="pt-5 pb-5">
+      <div class="container wrapabout">
+        <!-- <div class="red"></div> -->
+
+          
+            <div class="blockabout">
+              <div class="blockabout-inner text-center text-sm-start">
+                <div class="title-big pb-3 mb-3">
+                  <h3>Platform Significance:</h3>
+                </div>
+                <p class="description-p text-muted pe-0 pe-lg-0">
+                  SkillMatch isn’t just a platform; it’s a community built to
+                  help you grow, collaborate, and succeed. It’s where
+                  professionals, creators, and innovators come together to find
+                  the perfect match for their projects and skills. We empower
+                  you to take control of your professional development, whether
+                  by exploring new collaborations, enhancing your existing
+                  projects, or discovering skills that will elevate your career.
+                </p>
+                <p class="description-p text-muted pe-0 pe-lg-0">
+                  As you navigate through your dashboard, you’ll find tools and
+                  resources tailored to help you achieve your goals. Whether
+                  you're looking for potential collaborators, tracking your
+                  project milestones, or learning new skills, SkillMatch
+                  provides a personalized experience that grows with you.
+                </p>
+                <p class="description-p text-muted pe-0 pe-lg-0">
+                  Remember, collaboration is the key to success in today’s
+                  fast-paced world, and SkillMatch is here to help you unlock
+                  that potential. Your next great opportunity is just a click
+                  away—let's make it happen together!
+                </p>
+                <div class="sosmed-horizontal pt-3 pb-3">
+                  <a href="#"><i class="fa fa-facebook"></i></a>
+                  <a href="#"><i class="fa fa-instagram"></i></a>
+                  <a href="#"><i class="fa fa-pinterest"></i></a>
+                </div>
+                <a href="#" class="btn rey-btn mt-3">See More</a>
+              </div>
+            </div>
+      </div>
+    </section>
+
+    <!-- welcome - banner -->
+    <div class="">
+      <div
+        class="p-5 text-center bg-body-tertiary"
+        style="
+          height: 500px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        "
+      >
+        <div class="container py-5">
+          <h1 class="text-body-emphasis">Full-width jumbotron</h1>
+          <p class="col-lg-8 mx-auto lead">
+            This takes the basic jumbotron above and makes its background
+            edge-to-edge with a <code>.container</code> inside to align content.
+            Similar to above, it's been recreated with built-in grid and utility
+            classes.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quick Action Buttons -->
+    <div class="card-group" style="padding: 10px 0px">
+      <div class="card" style="padding: 10px">
+        <img
+          src="https://marketplace.canva.com/EAFWsmqzexw/1/0/1600w/canva-green-orange-retro-instagram-profile-picture-SyFEqNyqvxs.jpg"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">
+            <a
+              href="../AccountSetting/setting.html"
+              style="text-decoration: none; color: red"
+              >Edit Profile</a
+            >
+          </h5>
+          <p class="card-text">
+            This is a wider card with supporting text below as a natural lead-in
+            to additional content. This content is a little bit longer.
+          </p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Last updated 3 mins ago</small>
+        </div>
+      </div>
+      <div class="card" style="padding: 10px">
+        <img
+          src="https://img.freepik.com/free-vector/loupe-world-map_1010-441.jpg?t=st=1734463533~exp=1734467133~hmac=9422caa6b7c213423f6ad126bffa6e0d5ba2fee42af94540e4081cbaa50f4c12&w=740"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">
+            <a
+              href="../search/searchSkill.html"
+              style="text-decoration: none; color: hsl(213, 100%, 76%)"
+              >Search Skill</a
+            >
+          </h5>
+          <p class="card-text">
+            This card has supporting text below as a natural lead-in to
+            additional content.
+          </p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Last updated 3 mins ago</small>
+        </div>
+      </div>
+      <div class="card" style="padding: 10px">
+        <img
+          src="https://img.freepik.com/free-vector/silhouettes-modern-background_1048-3022.jpg?t=st=1734463742~exp=1734467342~hmac=25c3bb7742e1dee7ab528907d7ddba92eb4667d67d90074a3fb0f66f811b96dd&w=740"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">
+            <a
+              href="../collaborations/Collaboration.html"
+              style="text-decoration: none; color: hsl(213, 100%, 76%)"
+              >Collaborations</a
+            >
+          </h5>
+          <p class="card-text">
+            This is a wider card with supporting text below as a natural lead-in
+            to additional content. This card has even longer content than the
+            first to show that equal height action.
+          </p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Last updated 3 mins ago</small>
+        </div>
+      </div>
+      <div class="card" style="padding: 10px">
+        <img
+          src="https://img.freepik.com/free-vector/silhouettes-modern-background_1048-3022.jpg?t=st=1734463742~exp=1734467342~hmac=25c3bb7742e1dee7ab528907d7ddba92eb4667d67d90074a3fb0f66f811b96dd&w=740"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">View Endorsements</h5>
+          <p class="card-text">
+            This is a wider card with supporting text below as a natural lead-in
+            to additional content. This card has even longer content than the
+            first to show that equal height action.
+          </p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Last updated 3 mins ago</small>
+        </div>
+      </div>
+    </div>
+
+    <!-- toggle - check availability -->
+    <div class="container my-5 p-5">
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <!-- Status Card -->
+          <div class="status-card text-center">
+            <h3 class="mb-4">Your Collaboration Status</h3>
+            <p class="mb-4">
+              Let others know if you're available for collaboration on projects.
+            </p>
+
+            <!-- Toggle Switch for Availability -->
+            <div
+              class="form-check form-switch d-flex justify-content-center mb-4"
+            >
+              <input
+                class="form-check-input"
+                type="checkbox"
+                id="collabStatus"
+              />
+              <!-- <label class="form-check-label" for="collabStatus" id="statusLabel">Active</label> -->
+            </div>
+
+            <!-- Collaboration Status Button -->
+            <button class="btn btn-danger" id="statusBtn">
+              You are now inactive
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Collaboration stats -->
+    <div class="mt-5 p-5" style="background-color: #e9e9e9">
+      <h1 class="mb-5">Collaboration stats</h1>
+
+      <div class="row d-flex justify-content-center flex-wrap">
+        <div class="col-12 col-md-4 mb-3">
+          <div class="card text-white bg-danger mb-3" style="max-width: 18rem">
+            <div class="card-header">Header</div>
+            <div class="card-body">
+              <h5 class="card-title">Danger card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-4 mb-3">
+          <div class="card text-white bg-warning mb-3" style="max-width: 18rem">
+            <div class="card-header">Header</div>
+            <div class="card-body">
+              <h5 class="card-title">Warning card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-4 mb-3">
+          <div class="card text-white bg-info mb-3" style="max-width: 18rem">
+            <div class="card-header">Header</div>
+            <div class="card-body">
+              <h5 class="card-title">Info card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="gri"></div>
+    </div>
+
+    <!-- footer -->
+    <div class="container">
+      <footer class="py-5">
+        <div class="row">
+          <div class="col-6 col-md-2 mb-3">
+            <h5>Section</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary">Home</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary"
+                  >Features</a
+                >
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary">Pricing</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary">FAQs</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary">About</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-md-2 mb-3">
+            <h5>Section</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary">Home</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary"
+                  >Features</a
+                >
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary">Pricing</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary">FAQs</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary">About</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-md-2 mb-3">
+            <h5>Section</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary">Home</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary"
+                  >Features</a
+                >
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary">Pricing</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary">FAQs</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary">About</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-md-5 offset-md-1 mb-3">
+            <form>
+              <h5>Subscribe to our newsletter</h5>
+              <p>Monthly digest of what's new and exciting from us.</p>
+              <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                <label for="newsletter1" class="visually-hidden"
+                  >Email address</label
+                >
+                <input
+                  id="newsletter1"
+                  type="text"
+                  class="form-control"
+                  placeholder="Email address"
+                />
+                <button class="btn btn-primary" type="button">Subscribe</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div
+          class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top"
+        >
+          <p>© 2024 Company, Inc. All rights reserved.</p>
+          <ul class="list-unstyled d-flex">
+            <li class="ms-3">
+              <a class="link-body-emphasis" href="#"
+                ><svg class="bi" width="24" height="24">
+                  <use xlink:href="#twitter"></use></svg
+              ></a>
+            </li>
+            <li class="ms-3">
+              <a class="link-body-emphasis" href="#"
+                ><svg class="bi" width="24" height="24">
+                  <use xlink:href="#instagram"></use></svg
+              ></a>
+            </li>
+            <li class="ms-3">
+              <a class="link-body-emphasis" href="#"
+                ><svg class="bi" width="24" height="24">
+                  <use xlink:href="#facebook"></use></svg
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" src="./dashboard.js"></script>
+  </body>
+</html>
