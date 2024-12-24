@@ -18,7 +18,7 @@ const createNewCollaboration = document.getElementById(
 );
 
 createNewCollaboration.addEventListener("click", async () => {
-  window.location.href = window.location.origin + "/newCollabForm/newCollabForm.html";
+  window.location.href = window.location.origin + "/wocSkillMatch" + "/newCollabForm/newCollabForm.html";
 });
 
 const collabDisplayArea = document.getElementById("collab-display-area");
